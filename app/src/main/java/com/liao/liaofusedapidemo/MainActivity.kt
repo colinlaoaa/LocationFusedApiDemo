@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                     if (marker != null) marker!!.position = latLng else marker = mMap!!.addMarker(markerOptions)
                     mMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14F))
                 }
-                Toast.makeText(this@MainActivity, "Latitude is: $lat, Longitude is $longitude", Toast.LENGTH_LONG).show()
+                myToast(this@MainActivity,"Latitude is: $lat, Longitude is $longitude")
             }
         }
     }
