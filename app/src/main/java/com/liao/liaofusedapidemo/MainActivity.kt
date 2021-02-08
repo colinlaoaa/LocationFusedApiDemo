@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             1 -> if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //startLocService();
             } else {
-                Toast.makeText(this, "Give me permissions", Toast.LENGTH_LONG).show()
+                myToast(this,"Give me permissions")
             }
         }
     }
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
                     if (marker != null) marker!!.position = latLng else marker = mMap!!.addMarker(markerOptions)
                     mMap!!.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14F))
                 }
-                Toast.makeText(this@MainActivity, "Latitude is: $lat, Longitude is $longitude", Toast.LENGTH_LONG).show()
+                myToast(this@MainActivity,"Latitude is: $lat, Longitude is $longitude")
             }
         }
     }
