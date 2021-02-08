@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             1 -> if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 //startLocService();
             } else {
-                Toast.makeText(this, "Give me permissions", Toast.LENGTH_LONG).show()
+                myToast(this,"Give me permissions")
             }
         }
     }
